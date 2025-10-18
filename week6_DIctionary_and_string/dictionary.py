@@ -40,7 +40,6 @@ harga = {
 choice = 'y'
 
 while (choice == 'y') or (choice == 'Y') : 
-
     print("\n===== Selamat datang di toko buah =====\n")
     print("Berikut adalah daftar buah yang tersedia:")
     for item, amounts in stock.items() :
@@ -59,10 +58,10 @@ while (choice == 'y') or (choice == 'Y') :
         print("=====================================================\n")
         print(f"Sisa stock {buah} Sekarang adalah: {stock[buah]}")
         choice = input(("\nApakah anda ingin membeli buah lagi? y/n: "))
-
     else :
         print(f"\n Maaf stock sedang tidak tersedia")
 print("baiklah selamat tinggal")
+
 
 # # ===== EXTRA =====
 # def print_game_item_list(data) :
