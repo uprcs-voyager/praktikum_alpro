@@ -26,36 +26,43 @@
 
 # ===== TOKO BUAH ======
 stock = {
-    "pisang" : 10,
-    "apel" : 5,
-    "semangka" : 10,
-    "pir" : 3
-}
+        "pisang" : 10,
+        "apel" : 5,
+        "semangka" : 10,
+        "pir" : 3
+    }
 harga = {
-    "pisang" : 1000,
-    "apel" : 2000,
-    "semangka": 3000,
-    "pir" : 4000
-}
-print("\n===== Selamat datang di toko buah =====\n")
-print("Berikut adalah daftar buah yang tersedia:")
-for item, amounts in stock.items() :
-    print("{} = {}".format(item, amounts))
-buah = input("\nBuah apa yang ingin anda beli? :")
-jumlah = int(input("\nBerapa jumlah buah yang ingin anda beli? :"))
+        "pisang" : 1000,
+        "apel" : 2000,
+        "semangka": 3000,
+        "pir" : 4000
+    }
+choice = 'y'
 
-if stock[buah] >= jumlah :
-    stock_buah = stock[buah] - jumlah
-    total_harga = harga[buah]*jumlah
-    print("\n\n== Receipt ==")
-    print(f"// anda membeli buah {buah}")
-    print(f"// Jumlah pembelian: {jumlah}")
-    print(f"Total harga pembelian anda adalah: {total_harga}")
-    print("=====================================================\n")
-    print(f"Sisa stock {buah} Sekarang adalah: {stock_buah}")
-else :
-    print(f"\n Maaf stock sedang tidak tersedia")
+while (choice == 'y') or (choice == 'Y') : 
 
+    print("\n===== Selamat datang di toko buah =====\n")
+    print("Berikut adalah daftar buah yang tersedia:")
+    for item, amounts in stock.items() :
+        print("{} = {}".format(item, amounts))
+
+
+    buah = input("\nBuah apa yang ingin anda beli? :")
+    jumlah = int(input("\nBerapa jumlah buah yang ingin anda beli? :"))
+    if stock[buah] >= jumlah :
+        stock[buah] -= jumlah
+        total_harga = harga[buah]*jumlah
+        print("\n\n== Receipt ==")
+        print(f"// anda membeli buah {buah}")
+        print(f"// Jumlah pembelian: {jumlah}")
+        print(f"Total harga pembelian anda adalah: {total_harga}")
+        print("=====================================================\n")
+        print(f"Sisa stock {buah} Sekarang adalah: {stock[buah]}")
+        choice = input(("\nApakah anda ingin membeli buah lagi? y/n: "))
+
+    else :
+        print(f"\n Maaf stock sedang tidak tersedia")
+print("baiklah selamat tinggal")
 
 # # ===== EXTRA =====
 # def print_game_item_list(data) :
