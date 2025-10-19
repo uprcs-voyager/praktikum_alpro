@@ -57,3 +57,22 @@ def cetak_nama( nama = "lah nggak ada argumennya" ) :
 # cetak_nama() # <-- memanggil fungsi cetak_nama tanpa menggunakan argumen
 # cetak_nama("ilham asik dari jawa ") # <--memanggil fungsi cetak_nama tanpa menggunakan argumen
 
+def asal_kota (kota = "Balikpapan") :
+    print(f"Saya berasal dari kota {kota}")
+
+# asal_kota("banjar")
+# asal_kota()
+def cetak_list(list = ['kosong']) :
+    for i in list :
+        print(i)
+
+# cetak_list([1,2,3,4,5])
+# cetak_list()
+
+def cetak_segitiga(n = 5) :
+    for i in range(n) :
+        for j in range (i+1) :
+            print("*", end= "")
+        print()
+
+cetak_segitiga()
